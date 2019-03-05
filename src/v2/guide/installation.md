@@ -1,52 +1,52 @@
 ---
-title: Installation
+title: Instalasi
 type: guide
 order: 1
 vue_version: 2.5.16
 gz_size: "30.90"
 ---
 
-### Compatibility Note
+### Catatan Kompatibilitas
 
-Vue does **not** support IE8 and below, because it uses ECMAScript 5 features that are un-shimmable in IE8. However it supports all [ECMAScript 5 compliant browsers](https://caniuse.com/#feat=es5).
+Vue **tidak** mendukung IE8 dan di bawahnya, sebab menggunakan fitur ECMAScript 5 yang tidak bisa ditiru di IE8. Tapi mendukung semua [browser yang sesuai dengan ECMAScript 5](https://caniuse.com/#feat=es5).
 
-### Release Notes
+### Catatan Rilis
 
-Latest stable version: {{vue_version}}
+Versi stabil terakhir: {{vue_version}}
 
-Detailed release notes for each version are available on [GitHub](https://github.com/vuejs/vue/releases).
+Catatan rilis lebih detail untuk masing-masing versi tersedia di [GitHub](https://github.com/vuejs/vue/releases).
 
 ## Vue Devtools
 
-When using Vue, we recommend also installing the [Vue Devtools](https://github.com/vuejs/vue-devtools#vue-devtools) in your browser, allowing you to inspect and debug your Vue applications in a more user-friendly interface.
+Ketika menggunakan Vue, kami merekomendasikan juga untuk memasang [Vue Devtools](https://github.com/vuejs/vue-devtools#vue-devtools) di browser Anda, memungkinkan Anda untuk memeriksa dan men-*debug* aplikasi Vue Anda dalam antarmuka yang lebih ramah pengguna.
 
-## Direct `<script>` Include
+## Menyertakan `<script>` secara langsung
 
-Simply download and include with a script tag. `Vue` will be registered as a global variable.
+Cukup unduh dan sertakan tag script. `Vue` akan didaftarkan sebagai *global variable*.
 
-<p class="tip">Don't use the minified version during development. You will miss out on all the nice warnings for common mistakes!</p>
+<p class="tip">Jangan menggunakan versi *minified* pada saat developmen. Anda akan kehilangan semua peringatan yang bagus untuk kesalahan umum!</p>
 
 <div id="downloads">
-  <a class="button" href="/js/vue.js" download>Development Version</a><span class="light info">With full warnings and debug mode</span>
+  <a class="button" href="/js/vue.js" download>Versi Developmen</a><span class="light info">Dengan peringatan penuh dan mode debug</span>
 
-  <a class="button" href="/js/vue.min.js" download>Production Version</a><span class="light info">Warnings stripped, {{gz_size}}KB min+gzip</span>
+  <a class="button" href="/js/vue.min.js" download>Versi Produksi</a><span class="light info">Peringatan telah dihilangkan, {{gz_size}}KB min+gzip</span>
 </div>
 
 ### CDN
 
-For prototyping or learning purposes, you can use the latest version with:
+Untuk tujuan *prototyping* atau pembelajaran, Anda dapat menggunakan versi terbaru dengan:
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 ```
 
-For production, we recommend linking to a specific version number and build to avoid unexpected breakage from newer versions:
+Untuk produksi, kami sarankan menentukan versi tertentu untuk menghindari kerusakan yang tidak terduga dari versi yang lebih baru:
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
 ```
 
-If you are using native ES Modules, there is also an ES Modules compatible build:
+Jika Anda menggunakan *native ES Modules*, tersedia pula file yang kompatible dengan ES Modules:
 
 ``` html
 <script type="module">
@@ -54,31 +54,31 @@ If you are using native ES Modules, there is also an ES Modules compatible build
 </script>
 ```
 
-You can browse the source of the NPM package at [cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue/).
+Anda dapat menelusuri sumber NPM package di [cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue/).
 
-Vue is also available on [unpkg](https://unpkg.com/vue@{{vue_version}}/dist/vue.js) and [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) (cdnjs takes some time to sync so the latest release may not be available yet).
+Vue juga tersedia di [unpkg](https://unpkg.com/vue@{{vue_version}}/dist/vue.js) dan [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) (cdnjs perlu waktu untuk disinkronkan sehingga rilis terbaru mungkin belum tersedia).
 
-Make sure to read about [the different builds of Vue](#Explanation-of-Different-Builds) and use the **production
- version** in your published site, replacing `vue.js` with `vue.min.js`. This is a smaller build optimized for speed instead of development experience.
+Pastikan Anda telah membaca mengenai [berbagai versi *build* Vue](#Explanation-of-Different-Builds) dan selalu gunakan **versi
+ produksi** pada halaman yang telah diterbitkan, mengganti `vue.js` dengan `vue.min.js`. Ini adalah *build* yang lebih kecil yang dioptimalkan untuk kecepatan dibandingkan pengalaman pengembangan.
 
 ## NPM
 
-NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/). Vue also provides accompanying tools for authoring [Single File Components](single-file-components.html).
+NPM adalah metode instalasi yang disarankan ketika membangun aplikasi skala besar dengan Vue. Ini berpasangan dengan baik dengan *bundler* modul seperti [Webpack](https://webpack.js.org/) atau [Browserify](http://browserify.org/). Vue juga menyediakan alat yang menyertainya untuk membuat *[Single File Components](single-file-components.html)*.
 
 ``` bash
-# latest stable
+# stabil terakhir
 $ npm install vue
 ```
 
 ## CLI
 
-Vue provides an [official CLI](https://github.com/vuejs/vue-cli) for quickly scaffolding ambitious Single Page Applications. It provides batteries-included build setups for a modern frontend workflow. It takes only a few minutes to get up and running with hot-reload, lint-on-save, and production-ready builds. See [the Vue CLI docs](https://cli.vuejs.org) for more details.
+Vue menyediakan [CLI resmi](https://github.com/vuejs/vue-cli) untuk membangun Aplikasi *Single Page* dengan cepat. Ini menyediakan pengaturan yang sudah komplit untuk alur kerja frontend modern. Hanya perlu beberapa menit untuk memulai dan berjalan dengan *hot-reload*, *lint-on-save*, dan *build* yang siap produksi. Lihat [dokumentasi Vue CLI](https://cli.vuejs.org) untuk lebih jelasnya.
 
-<p class="tip">The CLI assumes prior knowledge of Node.js and the associated build tools. If you are new to Vue or front-end build tools, we strongly suggest going through <a href="./">the guide</a> without any build tools before using the CLI.</p>
+<p class="tip">CLI mengasumsikan pengetahuan Node.js sebelumnya dan alat *build* terkait. Jika Anda baru menggunakan Vue atau alat *build* front-end, kami sangat menyarankan untuk membaca <a href="./">panduan</a> tanpa alat *build* sebelum menggunakan CLI.</p>
 
-<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/real-world-vue-js/vue-cli" target="_blank" rel="noopener" title="Vue CLI">Watch a video explanation on Vue Mastery</a></div>
+<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/real-world-vue-js/vue-cli" target="_blank" rel="noopener" title="Vue CLI">Tonton video penjelasan di Vue Mastery</a></div>
 
-## Explanation of Different Builds
+## Penjelasan Berbagai *Build*
 
 In the [`dist/` directory of the NPM package](https://cdn.jsdelivr.net/npm/vue/dist/) you will find many different builds of Vue.js. Here's an overview of the difference between them:
 
