@@ -92,7 +92,7 @@ Anda bisa melakukan assertion pada hasil *render* dengan properti yang berbeda-b
 import Vue from 'vue'
 import MyComponent from './MyComponent.vue'
 
-// fungsi helper / pembantu yang melakukan mounts kemudian me-return text yang di-render
+// fungsi helper / pembantu yang menjalankan mounts kemudian mengembalikan teks yang di-render
 function getRenderedText (Component, propsData) {
   const Constructor = Vue.extend(Component)
   const vm = new Constructor({ propsData: propsData }).$mount()
