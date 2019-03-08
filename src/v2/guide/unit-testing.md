@@ -72,7 +72,7 @@ describe('MyComponent', () => {
 
 ## Menulis Komponen yang Dapat Dites
 
-Hasil *render* dari sebuah komponen secara utama ditentukan oleh properti-properti yang diterima komponen tersebut. Jika hasil *render* dari sebuah komponen hanya bergantung pada properti-nya -- maka akan mudah untuk mengetesnya, mirip dengan melakukan assertion pada fungsi yang memiliki bermacam-macam argumen. Berikut contoh sederhana:
+Hasil *render* dari sebuah komponen secara utama ditentukan oleh props yang diterima komponen tersebut. Jika hasil *render* dari sebuah komponen hanya bergantung pada props; maka akan mudah untuk mengetesnya, mirip dengan melakukan assertion pada fungsi yang memiliki bermacam-macam argumen. Berikut contoh sederhana:
 
 ``` html
 <template>
@@ -112,9 +112,9 @@ describe('MyComponent', () => {
 })
 ```
 
-## Melakukan Pengujian/*Assertion* pada Perubahan Asynchronous
+## Melakukan Pengujian/*Assertion* pada Pembaruan Asynchronous
 
-Karena Vue [melakukan update pada DOM secara asynchronous](reactivity.html#Async-Update-Queue), *assertion* pada *update* DOM yang disebabkan oleh perubahan *state* harus dilakukan dalam callback `Vue.nextTick`:
+Karena Vue [melakukan pembaruan pada DOM secara asynchronous](reactivity.html#Async-Update-Queue), *assertion* pada *update* DOM yang disebabkan oleh perubahan *state* harus dilakukan dalam callback `Vue.nextTick`:
 
 ``` js
 
@@ -131,4 +131,4 @@ it('updates the rendered message when vm.message updates', done => {
 })
 ```
 
-Untuk informasi yang lebih mendalam untuk *unit testing* di Vue, kunjungi [Vue Test Utils](https://vue-test-utils.vuejs.org/) dan *cookboook entry* kami tentang [unit testing vue components](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html)
+Untuk informasi yang lebih mendalam untuk *unit testing* di Vue, kunjungi [Vue Test Utils](https://vue-test-utils.vuejs.org/) dan *buku panduan* kami tentang [unit testing vue components](https://vuejs.org/v2/cookbook/unit-testing-vue-components.html)
