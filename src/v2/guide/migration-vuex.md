@@ -1,5 +1,5 @@
 ---
-title: Migrasi dari Vuex 0.6.X ke 1.0
+title: Migrasi dari Vuex 0.6.x ke 1.0
 type: guide
 order: 703
 ---
@@ -41,7 +41,7 @@ store.watch(
 )
 ```
 
-Hal ini memberikan Anda kontrol yang lebih lengkap terhapdap properti yang reaktif yang ingin anda amati (*watch*):
+Hal ini memberikan Anda kontrol yang lebih lengkap terhapdap properti yang reaktif yang ingin Anda amati (*watch*):
 
 {% raw %}
 <div class="upgrade-path">
@@ -50,10 +50,10 @@ Hal ini memberikan Anda kontrol yang lebih lengkap terhapdap properti yang reakt
 </div>
 {% endraw %}
 
-## Store Emiter Even <sup>dihapus</sup>
+## Emiter Event Store <sup>dihapus</sup>
 
 
-Instan dari store tidak lagi mengekspos interface "event emitter" (`on`, `off`, `emit`). Jika Anda menggunakan store sebagai *global event bus*, [lihat bagian ini](migration.html#dispatch-and-broadcast-removed)  untuk instruksi migrasi.
+*Instance* dari store tidak lagi mengekspos interface "event emitter" (`on`, `off`, `emit`). Jika Anda menggunakan store sebagai *global event bus*, [lihat bagian ini](migration.html#dispatch-and-broadcast-removed)  untuk instruksi migrasi.
 
 Ketimbang menggunakan interface ini untuk memantau even yang dikeluarkan oleh store (contoh: `store.on('mutation', callback)`), Vue menganalkan sebuah method baru `store.subscribe`. Penggunaan umum dalam sebuah plugin akan seperti:
 
@@ -71,7 +71,7 @@ Lihat contoh [dokumentasi plugins](https://github.com/vuejs/vuex/blob/1.0/docs/e
 
 {% raw %}
 <div class="upgrade-path">
-  <h4>Jalan *Upgrade*</h4>
+  <h4>Jalur *Upgrade*</h4>
   <p>Jalankan <a href="https://github.com/vuejs/vue-migration-helper">pembantu migrasi</a> dalam basis kode anda untuk menemukan contoh dari <code>store.on</code>, <code>store.off</code>, dan <code>store.emit</code>.</p>
 </div>
 {% endraw %}
@@ -93,7 +93,7 @@ Untuk detail yang lebih jelas, lihat [dokumentasi plugins](https://github.com/vu
 
 {% raw %}
 <div class="upgrade-path">
-  <h4>Jalan Upgrade</h4>
+  <h4>Jalur Upgrade</h4>
   <p>Jalankan <a href="https://github.com/vuejs/vue-migration-helper">pembantu migrasi</a> dalam basis kode Anda untuk menemukan contoh dari opsi <code>middlewares</code> di atas "store".</p>
 </div>
 {% endraw %}
