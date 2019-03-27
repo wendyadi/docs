@@ -12,15 +12,15 @@ Saya senang Anda bertanya! Jawabannya adalah tidak. Sekitar 90% API masih sama d
 
 > Darimana saya harus memulai sebuah migrasi?
 
-1. Awali dengan menjalankan [pembantu migrasi](https://github.com/vuejs/vue-migration-helper) dalam project saat ini. Kami sudah sangat berhati-hati untuk mengecilkan dan mengkompres seorang senior Vue developer menjadi sebuah *command line interface*. Kapan pun mereka mendeteksi adanya fitur yang usang, mereka akan memberitahu Anda, memberikan nasihat, dan menyediakan *links* ke lebih banyak informasi.
+1. Awali dengan menjalankan [pembantu migrasi](https://github.com/vuejs/vue-migration-helper) dalam project saat ini. Kami telah berhati-hati untuk mengecilkan dan memampatkan pengembangan Vue menjadi sebuah command line interface sederhana. Kapan pun mereka mendeteksi adanya fitur yang usang, mereka akan memberitahu Anda, memberikan nasihat, dan menyediakan *links* ke lebih banyak informasi.
 
 
 2. Setelah itu, lihatlah daftar isi dari halaman ini yang ada di *sidebar*. Jika Anda melihat topik yang mungkin mempengaruhi migrasi Anda, namun tidak diberitahukan oleh "pembantu migrasi", coba lihatlah topik tersebut.
 
-3. Jika Anda mempunyai sebuah tes, jalankan mereka dan amati apa saja yang masih gagal. Jika Anda tidak punya tes, bukalah aplikasi Anda di browser dan periksalah peringatan-peringantan dan error-error selagi anda bernavigasi di aplikasi Anda.
+3. Jika Anda mempunyai sebuah tes, jalankan mereka dan amati apa saja yang masih gagal. Jika Anda tidak punya tes, bukalah aplikasi Anda di peramban (*browser*) dan periksalah peringatan-peringatan dan galat-galat (*error*) selagi anda bernavigasi di aplikasi Anda.
 
 
-4. Pada tahap ini, aplikasi Anda seharusnya sudah sepenuhnya termigrasi. Jika Anda masih lapar, Anda dapat membaca sisa dari halaman ini - atau menyelam ke petunjuk [the begining](index.html) yang baru dan lebih baik. Banyak bagian yang bisa di *skim*, karena Anda sudah familiar dengan konsep-konsep dasar.
+4. Pada tahap ini, aplikasi Anda seharusnya sudah sepenuhnya termigrasi. Jika Anda masih ingin tahu lebih banyak lagi, Anda dapat membaca sisa dari halaman ini - atau menyelam ke petunjuk [the begining](index.html) yang baru dan lebih baik. Banyak bagian yang bisa di *skim*, karena Anda sudah familiar dengan konsep-konsep inti.
 
 
 > Berapa lama waktu yang dibutuhkan untuk memigrasi aplikasi Vue 1.x ke 2.0?
@@ -31,7 +31,7 @@ Ini bergantung pada beberapa faktor:
 
 - Berapa kali anda terganggu dan bermain dengan sebuah fitur baru yang lebih keren. 😉 &nbsp; Tidak menghakimi, ini juga terjadi kepada kami saat kami membangun 2.0.
 
-- Fitur-fitur usang apa saja yang Anda gunakan. Kebanyakan dapat ditingkatkan dan ditemukan penggantinya, tapi beberapa dapat menyita beberapa menit. Jika Anda tidak sedang mengikuti praktek terbaik (*best practice*), Vue 2.0 akan mencoba lebih keras untuk mengharuskan Anda mengikutinya. Hal ini merupakan hal yang baik untuk jangka panjang, tapi dapat juga berarti refactor yang signifikan (meski bisa jadi terlambat).
+- Fitur-fitur usang apa saja yang Anda gunakan. Kebanyakan dapat ditingkatkan dan ditemukan penggantinya, tapi beberapa dapat menyita beberapa menit. Jika Anda tidak sedang mengikuti praktik terbaik (*best practice*), Vue 2.0 akan mencoba lebih keras untuk mengharuskan Anda mengikutinya. Hal ini merupakan hal yang baik untuk jangka panjang, tapi dapat juga berarti *refactor* yang signifikan (meski bisa jadi terlambat).
 
 
 > Jika Saya upgrade ke Vue 2, akankah Saya juga harus meng-upgrade Vuex dan Vue Router?
@@ -40,12 +40,12 @@ Hanya Vue Router 2 yang cocok dengan Vue 2, jadi ya, anda juga harus mengikuti [
 
 Untuk Vuex, versi 0.8 saja sudah cocok dengan Vue 2, jadi anda tidak dipaksa untu melakukan *upgrade*. Satu-satunya alasan anda jika ingin melakukan upgrade secepatnya adalah untuk mendapatkan manfaat dari fitur-fitur baru di Vuex 2, seperti modules dan boilerplate yang dikurangi.
 
-## Templates
+## Templat
 
 ### Fragment Instances <sup>dihapus</sup>
 
 
-Setiap komponen harus memiliki tepat satu elemen root. *Fragment instance* tidak lagi diperbolehkan. Jika Anda memiliki template seperti ini:
+Setiap komponen harus memiliki sebuah elemen root. *Fragment instance* tidak lagi diperbolehkan. Jika Anda memiliki templat seperti ini:
 
 ``` html
 <p>foo</p>
@@ -64,7 +64,7 @@ Disarankan untuk membungkus seluruh konten dalam sebuah elemen baru, seperti ini
 {% raw %}
 <div class="upgrade-path">
   <h4>Jalur Upgrade</h4>
-  <p>Jalankan rangkaian tes atau aplikasi Anda setelah melakukan <em>upgrade</em> dan carilah <strong> console warnings</strong> mengenai beberapa elemen root dalam sebuah template. </p>
+  <p>Jalankan rangkaian tes atau aplikasi Anda setelah melakukan peningkatan dan carilah <strong> peringatan konsol</strong> mengenai beberapa elemen root dalam sebuah templat. </p>
 </div>
 {% endraw %}
 
